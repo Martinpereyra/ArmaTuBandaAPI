@@ -14,4 +14,9 @@ public class DataContext : DbContext
 
     public DbSet<Musico> Musicos { get; set; }
     
+    public DbSet<Tipo> Tipos { get; set; }
+
+    public DbSet<Genero> Generos { get; set; }
+
+    public DbSet<Instrumento> Instrumentos { get; set; }
 }

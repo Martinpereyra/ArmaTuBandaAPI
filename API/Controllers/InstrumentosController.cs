@@ -11,26 +11,18 @@ namespace API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class MusicosController : ControllerBase
+public class InstrumentosController : ControllerBase
 {
     private readonly DataContext _context;
-    public MusicosController(DataContext context)
+    public InstrumentosController(DataContext context)
     {
             _context = context;
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Musico>>> GetMusicos()
+    public async Task<ActionResult<IEnumerable<Instrumento>>> GetTipos()
     {
-        return await _context.Musicos.ToListAsync();
+        return await _context.Instrumentos.ToListAsync();
+    } 
 
-    }
-
-    
-    [HttpGet("{id}")]
-    public async Task<ActionResult<Musico>> GetMusico(int id)
-    {
-        return await _context.Musicos.FindAsync(id);
-
-    }
 }
