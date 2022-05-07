@@ -12,6 +12,7 @@ public class DataContext : DbContext
     {
     }
 
+    public DbSet<AppUser> Users { get; set; }
     public DbSet<Musico> Musicos { get; set; }
     
     public DbSet<Tipo> Tipos { get; set; }
@@ -19,4 +20,5 @@ public class DataContext : DbContext
     public DbSet<Genero> Generos { get; set; }
 
     public DbSet<Instrumento> Instrumentos { get; set; }
+
 }
